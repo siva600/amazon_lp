@@ -132,4 +132,936 @@ bands are skipped for next steps.
 Additionally I have improved the error responses which made developers 
 seamlessly identify the cause of failures within each stage.
 
-**RESULT:** This new approach reduced pipeline de
+**RESULT:** This new approach reduced pipeline delays by 50% for low risk 
+changes significantly accelerating developer workflow. I also received 
+positive feedback from multiple teams for making the process more intuitive 
+and less rigid. I learned that delivering meaningful results doesn't always 
+require building something new, often it's about improving what's already 
+existing in a way that aligns with user needs and business goals. 
+
+Differently: I would have done beta testing before full rollout, as I would 
+have gathered enough feedback, identify bugs and make improvements and put 
+user experience as priority.
+
+#### Story 2: API Performance Issues
+**SITUATION:** Our API platform, critical for our client-facing application, 
+began experiencing high latency and timeouts at peak hours impacting client 
+workflows. This resulted in poor experience and client complaints impacting 
+their work.
+
+**TASK:** As a backend member of them I was responsible for quickly 
+diagnosing and resolving these performance issues to restore reliable 
+service.
+
+**ACTION:** I analyzed logs, monitored system and API metrics and 
+communicated with the client to understand the pain points. I discovered 
+that long running requests were saturating the green unicorn worker pool. 
+I refactored the code to introduce the multi threading for I/O bound 
+operations and applied in memory cache aside strategy to serve frequent 
+data faster. 
+
+I increased gunicorn workers count and worked with infrastructure and client 
+teams to review and adjust the proxy timeout settings. I ran load tests, 
+monitored kibana logs and kept the client closely updated during peak hours.
+
+**RESULT:** The customer saw a drastic reduction in API response times, and 
+reliable responses even during peak hours. Client reported issues dropped 
+significantly and their feedback was overwhelmingly positive. they 
+appreciated both the technical improvements and proactive communication. 
+
+This experience reinforced my understanding about pro active monitoring and 
+cross team collaboration and keeping the customer at the center of our 
+decisions. By understanding and addressing the pain points we are able to 
+build trust and business value.
+
+#### Story 3: Proactive Security Implementation
+**SITUATION:** When implementing mandatory Snyk security scans in our SDLC 
+pipeline, I anticipated that developers would face significant friction 
+getting blocked from merging code due to vulnerability findings. While the 
+security requirement was non-negotiable, I recognized that simply enforcing 
+it without providing solutions would create developer frustration and 
+potential workarounds.
+
+**ACTION:** My proactive solution: I built three complementary systems 
+before the mandate went live:
+
+**Automated Remediation Suggestions:** Created a tool that queries Snyk's 
+vulnerability database and automatically suggests the correct package 
+versions, showing exactly which dependencies were affected and providing 
+remediation steps.
+
+**Exception Request Workflow:** Designed an automated approval system 
+allowing developers to request extensions from security teams with proper 
+justification, eliminating manual back-and-forth.
+
+**Knowledge Transfer:** Conducted workshops and one-on-one sessions to 
+educate teams on the new process and tools.
+
+**RESULT:** Customer Response: The rollout was remarkably smooth. Developer 
+satisfaction surveys showed 85% found the process "seamless," and we saw a 
+70% reduction in security-related merge delays compared to similar 
+implementations at other teams. Most importantly, security compliance 
+increased to 95% within the first month.
+
+---
+
+## 2. Ownership
+
+### Definition
+Leaders are owners. They think long term and don't sacrifice long-term 
+value for short-term results. They act on behalf of the entire company, 
+beyond just their own team. They never say "that's not my job."
+
+### Sample Questions
+1. Tell me about a time when you took on something significant outside 
+   your area of responsibility. Why was it important? What was the outcome?
+
+2. Describe a time when you didn't think you were going to meet a 
+   commitment you promised. How did you identify the risk and communicate 
+   it to stakeholders? Is there anything you would do differently?
+
+3. Give me an example of an initiative you undertook because you saw that 
+   it could benefit the whole company or your customers, but wasn't within 
+   any group's individual responsibility so nothing was being done.
+
+### Self-Assessment Questions
+Do you…
+- Ask questions?
+- Consider future outcomes (scalable, long-term value, etc.)?
+- Give feedback – coach and develop others (peers, associates, manager)?
+- Speak up in meetings – question, challenge respectfully?
+- Understand your role and relationship with other roles?
+- Understand the impact of your work on others?
+- Partner with peers across the network?
+
+### Example Stories
+
+#### Story 1: Taking on Customer Support
+**SITUATION:** Our team's support engineers were swamped with customer 
+tickets. Customers weren't getting quick help, and our regular work was 
+getting delayed. Even though handling support wasn't my job as a developer, 
+I could see this was hurting our whole team's success.
+
+**TASK:** I wanted to help customers get faster answers and learn what 
+problems they were actually facing so we could build better products.
+
+**ACTION:** I volunteered to handle customer support tickets during my 
+extra hours. Here's what I did: 
+- Answered customer questions and fixed their issues quickly
+- Wrote down common problems so the team could solve them faster next time
+- Shared customer feedback with developers during our team meetings
+- Helped newer team members learn how to talk to customers
+- Worked with product managers to turn customer complaints into actual 
+  improvements
+
+**RESULT:** After 6 months, we answered customer questions 60% faster and 
+customers were much happier. The best part was that customer feedback 
+helped us improve our products, which meant 35% fewer support tickets 
+overall. I also trained two junior developers who became great at helping 
+customers.
+
+#### Story 2: Security Upgrade Commitment
+**SITUATION:** I was tasked with implementing security upgrades across our 
+internal systems - migrating to firm-approved authentication, standard 
+logging, new AD/LDAP accounts with password rotation, and vault-based 
+password storage. The security team set a firm deadline due to compliance 
+requirements, and missing it could impact business operations.
+
+**TASK:** I committed to delivering all security upgrades within the given 
+timeline, promising stakeholders we would meet the deadline based on my 
+initial assessment.
+
+**ACTION:** About 60% through the project, I discovered a critical blocker: 
+our production servers weren't part of the CyberArk allowed nodes cluster, 
+and AD/LDAP services weren't responding. Upon investigation, I found that 
+only private IPs were configured in CyberArk, but since our production 
+servers were hosted on AWS, I needed public IPs whitelisted to communicate 
+with external systems. 
+
+This required approvals from security architecture teams and network teams, 
+which took much longer than expected - time I hadn't accounted for when 
+making my original commitment. I immediately escalated to stakeholders, 
+documenting the specific IP whitelisting requirements and approval 
+dependencies. I clearly explained how these additional infrastructure 
+requirements would impact our timeline while continuing non-dependent tasks 
+to maintain momentum.
+
+**RESULT:** While I missed the original deadline by 2 weeks, my early risk 
+identification and transparent communication helped minimize impact. All 
+security upgrades were successfully implemented without quality compromises. 
+
+What I would do differently: "First, I would conduct more thorough discovery 
+and infrastructure assessment during the planning phase to identify all 
+dependencies upfront. Second, I would build buffer time into my estimates 
+to account for cross-team approval processes, which often take longer than 
+anticipated."
+
+#### Story 3: SDLC Modernization Initiative
+**SITUATION:** In my current company, our SDLC critical checks - code 
+quality validation, security scanning, build verification, and deployment 
+gates - were running on legacy Perl services. These services were critical 
+to our software delivery pipeline but had significant issues: they weren't 
+scalable for our growing development team, lacked proper encryption standards 
+and required major changes for simple updates. While functioning, they posed 
+long-term risks to development velocity and could become bottlenecks as we 
+scaled.
+
+**TASK:** Although modernizing these services wasn't assigned to any specific 
+team, I saw an opportunity to align with the company's modernization 
+initiative while addressing these technical risks. My goal was to convert 
+these Perl services to Python to improve scalability, security, and 
+maintainability without disrupting our development workflow.
+
+**ACTION:** I started by analyzing all 12 critical services and interviewing 
+stakeholders across development, QA, security, and DevOps teams. I created a 
+migration strategy prioritizing services by business criticality, starting 
+with the most frequently used code quality checks. 
+
+I presented this initiative to leadership, demonstrating that our current 
+services took 45 minutes to process pull requests during peak hours and had 
+security compliance violations. I partnered across teams - collaborated with 
+security on encryption standards, worked with DevOps on CI/CD integration, 
+and coordinated with development teams to minimize disruption. 
+
+Throughout the project, I provided regular updates, created documentation, 
+and conducted knowledge transfer sessions while mentoring two junior 
+developers who joined the effort.
+
+**RESULT:** Over 6 months, I successfully converted all 12 services. Despite 
+the complexity of migrating critical infrastructure, my phased approach and 
+thorough testing kept disruptions minimal - we experienced only brief 
+slowdowns during migration windows and one planned rollback. 
+
+Results included: 
+- Reduced processing time from 45 minutes to 8 minutes per pull request
+- Increased concurrent capacity to process multiple pipelines at once
+- Achieved 100% security compliance
+- Improved deployment frequency by 40%
+
+---
+
+## 3. Invent and Simplify
+
+### Definition
+Leaders expect and require innovation and invention from their teams and 
+always find ways to simplify. They are externally aware, look for new 
+ideas from everywhere, and are not limited by "not invented here." As we 
+do new things, we accept that we may be misunderstood for long periods of 
+time.
+
+### Sample Questions
+1. Give me an example of a complex problem you solved with a simple 
+   solution. What made the problem complex? How do you know your solution 
+   addressed the problem?
+
+2. Describe the most innovative thing you've done and why you thought it 
+   was innovative. Ask for one or two more examples to see if it's a 
+   pattern of innovative thinking. What was the problem it was solving? 
+   What was innovative about it?
+
+3. Tell me about a time when you were able to make something simpler for 
+   customers. What drove you to implement this change? What was the impact?
+
+### Self-Assessment Questions
+Do you…
+- Simplify and always encourage others to innovate and change inefficient 
+  or unnecessarily complex processes?
+- Use new ideas and methods to do your job better and enhance the customer 
+  experience?
+- Think up and implement great ideas and simple solutions?
+- Know when not to reinvent the wheel?
+
+### Example Stories
+
+#### Story 1: Search Performance Optimization
+**SITUATION:** I was working on a API that searched through a repository of 
+700,000 log files generated by our automation processes. Users were 
+experiencing significant delays when searching for content, with API 
+response times reaching 8-10 seconds. Server CPU usage spiked to 90% during 
+peak hours, and concurrent requests created a cascading bottleneck that 
+degraded the entire system performance.
+
+**TASK:** My goal was to reduce search latency to under 2 seconds while 
+maintaining system stability and ensuring the solution could scale with our 
+growing data volume.
+
+**ACTION:** Rather than optimizing the existing file-based search 
+architecture, I proposed a fundamental shift to Elasticsearch. Our use case 
+was 80% search operations, which perfectly aligns with ES strengths. Our 
+automation generated consistent log formats that map well to ES document 
+structure. ES handles our 700K+ files easily and can grow to millions 
+without architectural changes. 
+
+I designed a migration strategy to move historical data from flat files to 
+Elasticsearch indices. Modified our automation pipeline to write directly 
+to Elasticsearch instead of generating log files. Implemented a phased 
+rollout, starting with new data while backfilling historical records. 
+Created monitoring dashboards to track performance improvements.
+
+**RESULT:** The solution reduced average search response time from 8 seconds 
+to 400 milliseconds - a 95% improvement. Server CPU usage dropped to 30% 
+during peak hours, and we eliminated the concurrent request bottleneck 
+entirely. The system now handles 10x more concurrent searches without 
+performance degradation. This simple architectural change solved what 
+initially seemed like a complex optimization problem by recognizing we 
+needed the right tool, not a better implementation of the wrong tool.
+
+#### Story 2: Push-Based Patch Distribution
+**SITUATION:** Our team managed a critical code patch distribution system 
+for various deployments across the organization. The existing architecture 
+used a 10-minute batch polling mechanism to check for new patches from 
+upstream systems. During high-priority incidents, users had to wait up to 
+10 minutes for critical patches, which was eroding trust in our platform's 
+reliability during the moments they needed us most.
+
+**TASK:** I needed to eliminate the polling delay while working within 
+constraints of multiple upstream systems that weren't designed for real-time 
+integration.
+
+**ACTION:** Instead of optimizing the polling frequency, I innovated a 
+direct push integration system:
+
+**Push APIs:** Built APIs that upstream systems could easily integrate into 
+their patch-building process to push data directly to our system
+
+**Seamless integration:** Designed the APIs to be lightweight and simple for 
+upstream teams to adopt without major changes to their workflows
+
+**Metadata-driven processing:** Our system receives both patch data and 
+metadata instantly, enabling immediate availability and intelligent routing
+
+**Cross-functional collaboration:** Worked with multiple upstream teams to 
+integrate these push APIs into their build pipelines
+
+**RESULT:** Reduced patch availability latency from up to 10 minutes to 
+real-time (under 10 seconds). System reliability increased to 99.9% uptime, 
+and user satisfaction scores improved by 40%. The push APIs now handle 500+ 
+direct patch deliveries daily across 12 upstream systems. 
+
+What made it innovative: 
+- Paradigm shift: Eliminated the "pull" model entirely by making upstream 
+  systems active participants in delivery
+- Frictionless integration: APIs were so simple that teams could integrate 
+  them during their existing build process
+- Real-time architecture: Transformed a batch system into real-time without 
+  complex infrastructure changes
+- Scalable pattern: Created a reusable integration model that other teams 
+  have adopted for similar cross-system communications
+
+---
+
+## 4. Insist on the Highest Standards
+
+### Definition
+Leaders have relentlessly high standards—many people may think these 
+standards are unreasonably high. Leaders are continually raising the bar 
+and drive their teams to deliver high quality products, services and 
+processes. Leaders ensure that defects do not get sent down the line and 
+that problems are fixed so they stay fixed.
+
+### Sample Questions
+1. Tell me about a time you wouldn't compromise on achieving a great 
+   outcome when others felt something was good enough. What was the 
+   situation?
+
+2. Tell me about a time when you were unsatisfied with the status quo. 
+   What did you do to change it? What was the impact? Would you do 
+   anything differently in the future?
+
+3. Tell me about a time when you worked to improve the quality of a 
+   product / service / solution that was already getting good customer 
+   feedback. Why did you think it needed improvement? How did customers 
+   react?
+
+4. Give me an example of a goal you've had where you wish you had done 
+   better. What was the goal and how could you have improved on it?
+
+### Self-Assessment Questions
+Do you…
+- Ensure the quality bar remains high by delivering high quality work, and 
+  demanding it of others' work?
+- Continually self-critique your work to make sure the quality is the best 
+  it can be?
+- Accept and seek out coaching and feedback from your manager and others 
+  about improving the quality of your work?
+
+### Example Story
+
+**SITUATION:** I was assigned an urgent requirement from a client to provide 
+all pipeline metadata tied to change requests through APIs. The client 
+needed this data for their predictive automation system that would run 
+periodic queries every few hours against our systems. The client explicitly 
+stated they prioritized data reliability over latency, and our team had 
+agreed to an SLA of several seconds for internal API response times, which 
+was considered acceptable for periodic automation.
+
+**TASK:** My goal was to deliver a reliable API solution that met the 
+client's data requirements within the agreed SLA timeframe. However, I 
+personally wanted to achieve much higher performance standards than what 
+was considered "good enough" by both the client and my team.
+
+**ACTION:** While others felt the agreed-upon SLA was sufficient, I refused 
+to settle for mediocre performance. I took it upon myself to optimize the 
+solution far beyond the minimum requirements. I conducted a thorough 
+analysis of the API calls and identified routine I/O operations that were 
+generating identical responses for the same queries. 
+
+I then implemented a comprehensive caching layer to eliminate these redundant 
+operations. I spent additional time profiling the system, identifying 
+bottlenecks, and continuously refining the caching strategy to maximize 
+performance gains. Throughout this process, I maintained my high standards 
+despite pressure to simply deliver a "good enough" solution.
+
+**RESULT:** I achieved a 60% reduction in API response latency, far exceeding 
+the original SLA requirements. The client was so impressed with the 
+performance improvement that they actually reduced the frequency of their 
+periodic automation, which had an unexpected positive impact on our systems. 
+
+This became crucial because client requests peaked 50% higher than initially 
+expected, putting significant pressure on our infrastructure during peak 
+times. My optimization not only improved the client experience but also 
+reduced the load on our systems, allowing us to better serve other clients 
+during high-demand periods.
+
+---
+
+## 5. Bias for Action
+
+### Definition
+Speed matters in business. Many decisions and actions are reversible and 
+do not need extensive study. We value calculated risk taking.
+
+### Sample Questions
+1. Give me an example of a calculated risk that you have taken where speed 
+   was critical. What was the situation and how did you handle it? What 
+   steps did you take to mitigate the risk? What was the outcome? Knowing 
+   what you know now, would you have done anything differently?
+
+2. Tell me about a time when you worked against tight deadlines and didn't 
+   have time to consider all options before making a decision. How much 
+   time did you have? What approach did you take? What did you learn from 
+   the situation?
+
+3. Describe a situation where you made an important business decision 
+   without consulting your manager. What was the situation and how did it 
+   turn out? Would you have done anything differently?
+
+### Self-Assessment Questions
+Do you…
+- Quickly identify if you need more info before taking action, request 
+  that info, and move forward?
+- Be ready, willing and able to roll up sleeves and assist with 
+  customer-facing tasks when needed?
+- Ask for help when needed in a timely manner?
+- Respond promptly to requests for information?
+- Follow up and deliver as promised?
+- Make sure you create an "action item list" (identify owner and target 
+  dates)?
+
+---
+
+## 6. Learn and Be Curious
+
+### Definition
+Leaders are never done learning and always seek to improve themselves. 
+They are curious about new possibilities and act to explore them.
+
+### Sample Questions
+1. What is the coolest thing you have learned on your own that has helped 
+   you better perform your job?
+
+2. Tell me about a time when you realized you needed to have a deeper 
+   level of subject matter expertise to do your job well?
+
+3. Tell me of a time when you took on work outside of your comfort area 
+   and found it rewarding?
+
+### Self-Assessment Questions
+Do you…
+- Take time to read, watch a tech talk, or actively mentor someone else?
+- Ask your peers, manager, and customers for feedback on your performance?
+- Pick up work outside your area of expertise to stretch and grow?
+- Take time to understand your systems end to end?
+- Actively seek out advice from others?
+
+---
+
+## 7. Earn Trust
+
+### Definition
+Leaders listen attentively, speak candidly, and treat others respectfully. 
+They are vocally self-critical, even when doing so is awkward or 
+embarrassing. Leaders do not believe their or their team's body odor 
+smells of perfume. They benchmark themselves and their teams against the 
+best.
+
+### Sample Questions
+1. Tell me about a time when you had to communicate a change in direction 
+   that you anticipated people would have concerns with. What did you do 
+   to understand the concerns and mitigate them? Were there any changes 
+   you made along the way after hearing these concerns? How did you handle 
+   questions and/or resistance? Were you able to get people comfortable 
+   with the change?
+
+2. Give me an example of a tough or critical piece of feedback you 
+   received. What was it and what did you do about it?
+
+3. Describe a time when you needed to influence a peer who had a differing 
+   opinion about a shared goal. What did you do? What was the outcome?
+
+4. Tell me about a piece of direct feedback you recently gave to a 
+   colleague. How did he or she respond? How do you like to receive 
+   feedback from coworkers or managers?
+
+### Self-Assessment Questions
+Do you…
+- Earn the trust and respect of the team and build positive working 
+  relationships by consistently making good decisions, keeping commitments, 
+  treating others and their ideas with respect, and adhering to high 
+  ethical standards?
+- Admit mistakes, issues and areas for development; seek out and accept 
+  coaching and feedback to improve?
+- Escalate issues even when doing so might be unpopular?
+
+### Example Story
+
+**SITUATION:** Our team implemented a new policy requiring all code changes 
+to follow standard SDLC procedures with testing, security reviews, and 
+approvals. However, some clients had legitimate infrastructure changes that 
+didn't need the full SDLC process, but we couldn't differentiate them from 
+regular deployments.
+
+**TASK:** I needed to communicate this change, address anticipated client 
+resistance, and ensure smooth implementation while maintaining trust and 
+alignment with management's directive.
+
+**ACTION:** I proactively reached out to key stakeholders to understand 
+their concerns before resistance escalated. I listened to their feedback 
+and discovered many were worried about delays to critical infrastructure 
+changes. Instead of dismissing concerns, I openly acknowledged the validity 
+of their issues and admitted our initial approach had gaps. 
+
+I was transparent about the management directive while working collaboratively 
+with clients to design an exception workflow for legitimate infrastructure 
+changes. I held working sessions to refine the process and established 
+regular feedback channels.
+
+**RESULT:** By listening and adapting, I created a hybrid workflow that 
+satisfied both compliance requirements and client needs. Within three months, 
+95% of changes followed new SDLC procedures, with the remaining 5% handled 
+efficiently through the exception process. 
+
+Client satisfaction remained high because they felt heard and respected. My 
+transparent communication and willingness to adapt based on feedback 
+strengthened relationships with both clients and stakeholders, demonstrating 
+that earning trust requires honest dialogue even when uncomfortable.
+
+---
+
+## 8. Dive Deep
+
+### Definition
+Leaders operate at all levels, stay connected to the details, audit 
+frequently, and are skeptical when metrics and anecdote differ. No task 
+is beneath them.
+
+### Sample Questions
+1. Tell me about a time when you were trying to understand a complex 
+   problem on your team and you had to dig into the details to figure it 
+   out. Who did you talk with or where did you have to look to find the 
+   most valuable information? How did you use that information to help 
+   solve the problem?
+
+2. Tell me about a situation that required you to dig deep to get to the 
+   root cause. How did you know you were focusing on the right things? 
+   What was the outcome? Would you have done anything differently?
+
+3. Tell me about a problem you had to solve that required in-depth thought 
+   and analysis. How did you know you were focusing on the right things? 
+   What was the outcome? Would you have done anything differently?
+
+### Self-Assessment Questions
+Do you…
+- Refrain from passing the buck on unwanted tasks, demonstrate hustle and 
+  a "do what it takes" attitude to get things done, even if that means 
+  being hands-on?
+- Have a firm grasp of the details of your work in order to deeply discuss 
+  it?
+- Frequently "audit" your work by checking accuracy, facts and assumptions?
+
+### Example Story
+
+**SITUATION:** I encountered a critical production issue where our server 
+was experiencing extremely high CPU usage with multiple Celery tasks stuck 
+in the STARTING state. While I restarted the services which temporarily 
+improved the CPU usage, status alerts continued to persist, indicating 
+deeper underlying problems.
+
+**TASK:** I needed to identify the root cause of why certain tasks remained 
+in STARTING state despite the restart and determine if there were still 
+performance bottlenecks affecting our production environment.
+
+**ACTION:** I collected comprehensive diagnostic data by running status 
+commands to get detailed view of all running processes and their status, 
+identifying critical components stuck in STARTING state. Examined 
+system-level metrics including CPU usage patterns, specifically identifying 
+Celery and RabbitMQ processes that were consuming significant resources.
+
+Rather than assuming high CPU was the primary issue, I investigated the 
+connection between the message broker and worker processes, suspecting a 
+queue backlog or communication issue. Went beyond surface metrics - instead 
+of being satisfied with improved CPU after restart, I dug into RabbitMQ 
+logs and discovered message acknowledgment timeouts.
+
+Analyzed Celery worker logs line-by-line and found that tasks were timing 
+out during database connection establishment. Investigated database 
+connection pool settings and discovered we had reached the maximum 
+connection limit. Traced the issue to a recent code deployment that 
+increased concurrent database queries without adjusting connection pool 
+size. Validated the root cause by temporarily increasing connection pool 
+limits and monitoring task completion rates.
+
+**RESULT:** The deep investigation revealed the real issue wasn't CPU or 
+message queuing, but database connection exhaustion causing cascading 
+failures. After increasing the database connection pool size and optimizing 
+query patterns in the recent deployment, task processing returned to normal 
+with 95% reduction in STARTING state tasks. 
+
+CPU usage stabilized at healthy levels permanently, not just temporarily. 
+This taught me that surface-level metrics can be misleading - the CPU spike 
+was a symptom, not the cause. I now always investigate the full system 
+interaction chain during performance issues rather than focusing on the 
+most obvious metric.
+
+---
+
+## 9. Deliver Results
+
+### Definition
+Leaders focus on the key inputs for their business and deliver them with 
+the right quality and in a timely fashion. Despite setbacks, they rise to 
+the occasion and never settle.
+
+### Sample Questions
+1. Give me an example of a time when you were able to deliver an important 
+   project under a tight deadline. What sacrifices did you have to make to 
+   meet the deadline? How did they impact the final deliverable? What was 
+   the final outcome?
+
+2. Tell me about a time when you had significant, unanticipated obstacles 
+   to overcome in achieving a key goal. What was the obstacle? Were you 
+   eventually successful? Knowing what you know now, is there anything you 
+   would have done differently?
+
+3. Tell me about a time when you not only met a goal but considerably 
+   exceeded expectations. How were you able to do it? What challenges did 
+   you have to overcome?
+
+### Self-Assessment Questions
+Do you…
+- Continually reinforce to yourself and the team who the customer is in 
+  order to execute and deliver the right results?
+- Focus on the most important tasks while adapting as needed to achieve 
+  results?
+- Persevere through setbacks and overcome obstacles to deliver outstanding 
+  results?
+
+---
+
+## 10. Are Right, A Lot
+
+### Definition
+Leaders are right a lot. They have strong judgment and good instincts. 
+They seek diverse perspectives and work to disconfirm their beliefs.
+
+### Sample Questions
+1. Tell me about a time when you didn't have enough data to make the right 
+   decision. What did you do? What path did you take? Did the decision 
+   turn out to be the correct one?
+
+2. Tell me about a strategic decision you had to make without clear data 
+   or benchmarks. How did you make your final decision? What alternatives 
+   did you consider? What were the tradeoffs of each? How did you mitigate 
+   risk?
+
+3. We don't always make the right decision all the time. Tell me about a 
+   time when you made a bad decision.
+
+4. Tell me about a time when you discovered that your idea was not the 
+   best course of action. What was your idea? Why wasn't your idea the 
+   best course of action? How did you find out it was not the correct 
+   path? What was the best course of action? Who provided it? What did 
+   you learn from the experience?
+
+### Self-Assessment Questions
+Do you…
+- Use sound business judgment to make the right decisions quickly and 
+  achieve results, even in the absence of complete data?
+- Question whether decisions are being made in the Company's and 
+  customer's best interest and change course when they are not?
+- Recognize that your idea may not be as good as someone else's and get 
+  on board with the best idea?
+
+### Example Story
+
+**SITUATION:** I was implementing an SDLC enforcement tool to scan for 
+expired libraries before deployment across Android, Linux, and Mac 
+environments. All our CI/CD pipelines were written in Groovy scripts. The 
+problem was we had plenty of test scenarios for Android and Linux in our 
+lower environments, but almost no Mac pipeline scenarios to test against.
+
+**TASK:** I needed to ensure the enforcement would work reliably on Mac 
+before production rollout, but I didn't have enough Mac test data to 
+validate it properly.
+
+**ACTION:** I analyzed existing Android and Linux pipeline logs to identify 
+common patterns and potential edge cases. Reached out to Mac development 
+teams to understand their specific toolchain and dependency management 
+differences. Rather than delay the entire rollout, I implemented a phased 
+deployment strategy. 
+
+I created a Mac-specific test branch with enhanced logging and deployed the 
+enforcement in "monitoring mode" for Mac environments only - meaning it 
+would scan and report but not block deployments. This gave me real 
+production data while minimizing risk. Set up enhanced logging to capture 
+real production data while minimizing risk. Established feedback loop with 
+Mac developers to report any anomalies. Created automated alerts for 
+Mac-specific scanning failures. Worked with infrastructure team to build 
+additional Mac pipeline scenarios in lower environments.
+
+**RESULT:** The decision proved correct. Within two weeks of monitoring mode 
+deployment, I identified three Mac-specific edge cases that would have 
+caused false positives in production - issues related to framework bundling 
+and dependency resolution that were unique to the Mac environment. 
+
+The enhanced logging provided the data I needed to refine the Groovy scripts 
+for Mac-specific scenarios. This approach prevented what could have been a 
+major disruption to Mac development teams while still meeting our security 
+timeline. The monitoring-first strategy became a template for future 
+cross-platform rollouts. 
+
+The decision to use production monitoring instead of waiting for perfect 
+test data saved us months while still ensuring quality. I learned that 
+sometimes production data is more valuable than perfect test coverage.
+
+---
+
+## 11. Think Big
+
+### Definition
+Thinking small is a self-fulfilling prophecy. Leaders create and communicate 
+a bold direction that inspires results. They think differently and look 
+around corners for ways to serve customers.
+
+### Sample Questions
+1. Tell me about time when you were working on an initiative or goal and 
+   saw an opportunity to do something much bigger or better than the 
+   initial focus. Did you take that opportunity? Why or why not? What was 
+   the outcome?
+
+### Self-Assessment Questions
+Do you…
+- Translate broader mission into big, hairy ideas and tactics in your own 
+  work?
+
+### Example Story
+
+**SITUATION:** I was rebuilding a Python package for a client who needed to 
+upgrade their package with new libraries per new regulations. The process 
+seemed straightforward but required validating each library (closed source 
+vs open source), checking licenses, updating the package, building it, and 
+delivering to the client. However, I spent 30 minutes just figuring out the 
+compliance requirements for one library - a process our entire team follows 
+for every client requirement. 
+
+I realized we were facing a major bottleneck with an upcoming Python 3.9 to 
+3.13 migration project starting in a few months, where all our team would 
+be swamped with tickets requiring library updates for this major upgrade.
+
+**TASK:** Rather than just completing this single package rebuild, I 
+recognized the need to think bigger and create a scalable solution that 
+would handle the massive influx of upgrade requests and transform how our 
+team approaches package management long-term.
+
+**ACTION:** I designed an end-to-end automation system where users can 
+select package versions and dependent libraries through a user-friendly 
+interface. Built automation logic that automatically categorizes libraries 
+into open source vs closed source and takes appropriate compliance actions 
+for each category. 
+
+Implemented automated license verification for each library, eliminating the 
+manual 30-minute research process. Created automated package building and 
+delivery workflows. Added comprehensive library version choices with 
+vulnerability zone categorization (low, medium, high risk) to help users 
+make informed long-term decisions. 
+
+Designed the system to handle bulk operations for major upgrades like Python 
+version migrations. Built analytics dashboards to track usage patterns and 
+identify frequently requested libraries for proactive updates.
+
+**RESULT:** The automation tool reduced individual library processing time 
+from 30 minutes to under 2 minutes - a 93% time reduction. When the Python 
+3.9 to 3.13 migration launched, instead of drowning in tickets, our team 
+processed 500+ package upgrades in the first month with minimal manual 
+intervention. 
+
+The tool handled 85% of requests automatically, freeing our team to focus 
+on complex architectural challenges and strategic initiatives. Client 
+satisfaction increased significantly due to faster turnaround times, and we 
+became the go-to team for package management across the organization. 
+
+This experience taught me that identifying patterns in routine work can lead 
+to transformative solutions that benefit not just immediate tasks but entire 
+organizational capabilities.
+
+---
+
+## 12. Have Backbone; Disagree and Commit
+
+### Definition
+Leaders are obligated to respectfully challenge decisions when they 
+disagree, even when doing so is uncomfortable or exhausting. Leaders have 
+conviction and are tenacious. They do not compromise for the sake of social 
+cohesion. Once a decision is determined, they commit wholly.
+
+### Sample Questions
+1. Tell me about a time when you strongly disagreed with your manager or 
+   peer on something you considered very important to the business. What 
+   was it and how did you handle it? Knowing what you know now, would you 
+   do anything differently?
+
+2. Describe a time when you took an unpopular stance in a meeting with 
+   peers and your leader. What was it? Why did you feel strongly about 
+   it? What did you do? What was the outcome?
+
+### Self-Assessment Questions
+Do you…
+- Stand up for what you believe is in the best interest of the company 
+  and our customers?
+- Get on board with decisions that have been made, even though you may 
+  not have originally agreed?
+
+### Example Story: Refusing to Bypass Security Checks
+
+**SITUATION:** I was responsible for maintaining our deployment pipeline and 
+ensuring all code changes pass mandatory security checks before reaching 
+production. Our SDLC process required every pull request to successfully 
+complete automated security scans, code quality checks, and vulnerability 
+assessments. 
+
+One afternoon, my manager approached me with an urgent request from a major 
+client who needed a critical feature deployed immediately. The client was 
+facing a business-critical deadline and had escalated directly to leadership, 
+requesting we bypass our standard security validation process to expedite 
+the deployment.
+
+**TASK:** My manager asked me to merge the PR immediately, skipping the 
+security validation stage to meet the client's urgent timeline. However, I 
+was responsible for maintaining the integrity of our security standards and 
+ensuring no vulnerabilities reached production.
+
+**ACTION:** Despite the pressure from my manager and the client escalation, 
+I respectfully disagreed with bypassing the security checks. I explained to 
+my manager that the PR was currently failing our automated security scans, 
+specifically showing:
+- Two high-severity dependency vulnerabilities 
+- One medium-risk code injection possibility
+- Missing input validation on user-facing endpoints
+
+I presented evidence from our previous incidents where bypassed security 
+checks led to production vulnerabilities that cost significantly more time 
+to fix than the original delay would have been. I offered alternative 
+solutions:
+- Work with the development team to quickly remediate the specific security 
+  issues (estimated 2-3 hours)
+- Implement a temporary hotfix for just the critical functionality while 
+  the full feature underwent proper security review
+- Coordinate with our security team for an expedited review process
+
+I made it clear that while I understood the business urgency, I couldn't 
+compromise on security standards that protect both our systems and the 
+client's data. I committed to personally coordinating the remediation to 
+minimize delays.
+
+**RESULT:** Initially, my manager was frustrated with my refusal, but I 
+stood firm on the security requirements. Working with the development team, 
+we identified and fixed the security vulnerabilities within 3 hours. The 
+deployment proceeded successfully with all security checks passing.
+
+Two weeks later, we learned that a competitor had suffered a major security 
+breach due to a similar vulnerability that we had caught and prevented. My 
+manager acknowledged that my decision to maintain our security standards 
+was correct and potentially saved the company from a significant security 
+incident.
+
+The client appreciated our thoroughness once they understood the security 
+risks we had prevented. This experience led to establishing a formal 
+"expedited security review" process for genuine emergencies, reducing future 
+conflicts between speed and security. My commitment to our security standards, 
+even under pressure, reinforced the importance of these processes across 
+the organization.
+
+---
+
+## 13. Hire and Develop the Best
+
+### Definition
+Leaders raise the performance bar with every hire and promotion. They 
+recognize exceptional talent, and willingly move them throughout the 
+organization. Leaders develop leaders and take seriously their role in 
+coaching others. We work on behalf of our people to invent mechanisms for 
+development like career choice.
+
+### Sample Questions
+1. Give me an example of a time you provided feedback to develop the 
+   strengths of someone on your team. Were you able to positively impact 
+   their performance?
+
+### Self-Assessment Questions
+Do you…
+- Invest in the growth of others by taking ownership to mentor and guide 
+  them when you have expertise in a particular area?
+
+---
+
+## Tips for Using This Worksheet
+
+### Preparation Strategy
+1. **Read through each leadership principle** and jot down experiences that 
+   come to mind in the Ideas/Experiences column
+
+2. **Break down your best stories** using the STAR method format
+
+3. **Practice telling your stories** within the time guidelines:
+   - Situation/Task: 1-2 minutes
+   - Actions: 5-6 minutes  
+   - Results: 1-2 minutes
+   - Extra details: 2-3 minutes if time allows
+
+4. **Focus on YOUR role** - Use "I" not "we" when describing actions
+
+5. **Include metrics and data** whenever possible in your results
+
+6. **Prepare multiple stories** for high-probability principles (marked in 
+   GREEN)
+
+### Interview Best Practices
+- **Hook them early** with compelling situation setup
+- **Give specific details** about your actions and contributions
+- **Quantify your results** with numbers, percentages, and measurable 
+  outcomes
+- **Show learning and growth** from each experience
+- **Leave room for follow-up questions** - don't exhaust all details upfront
+- **Stay customer-focused** in all your examples
+
+### Story Selection Guidelines
+- Choose stories that demonstrate **growth and learning**
+- Include examples from **different time periods** and roles
+- Show **increasing responsibility** and impact over time
+- Demonstrate **collaboration** across teams and stakeholders
+- Highlight **innovation** and **problem-solving** abilities
+- Include examples of **difficult decisions** and **overcoming obstacles**
+
+Remember: The goal is to demonstrate how you embody each leadership 
+principle through specific, measurable examples that show your impact and 
+growth as a leader.
