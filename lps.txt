@@ -3,17 +3,22 @@
 ## STAR Method Framework
 
 ### Point A: Story Telling
-**POINT A:** Story telling… this is where you set-the-stage. Put the interviewer in your shoes so they want to follow along for the rest of the story.
+**POINT A:** Story telling… this is where you set-the-stage. Put the 
+interviewer in your shoes so they want to follow along for the rest of 
+the story.
 
 **HOOK THEM!**
 
 ### Getting From Point A to Point B
-**GETTING FROM POINT A TO POINT B:** Now, let's give them the details. What happened? What did **YOU** do? How did you address the problem/task/challenge at-hand?
+**GETTING FROM POINT A TO POINT B:** Now, let's give them the details. 
+What happened? What did **YOU** do? How did you address the 
+problem/task/challenge at-hand?
 
 **Details & DATA!**
 
 ### Point B: Conclusion
-**POINT B:** Wrap it up, and put a pretty bow on it! Every good story has a satisfying ending. "The End" isn't going to cut it.
+**POINT B:** Wrap it up, and put a pretty bow on it! Every good story 
+has a satisfying ending. "The End" isn't going to cut it.
 
 **Bring it "full circle"!**
 
@@ -25,21 +30,32 @@
 Don't play all your cards. Leave room for follow-up questions
 
 - **Situation / Task (set the stage)** - *1-2 minutes*
-- **Actions (give the details; what did YOU do to address it?)** - *5-6 minutes*
+- **Actions (give the details; what did YOU do to address it?)** - 
+  *5-6 minutes*
 - **Results (wrap it up; conclusion)** - *1-2 minutes*
 - **Extra details, stats, etc.** - *2-3 minutes if time allows*
 
 ### Detailed STAR Guidelines
 
-**SITUATION:** Describe the situation that you were in, or the task that you needed to accomplish. Give enough detail for the interviewer to understand the complexities of the situation. This example can be from a previous job, school project, volunteer activity, or any relevant event.
+**SITUATION:** Describe the situation that you were in, or the task that 
+you needed to accomplish. Give enough detail for the interviewer to 
+understand the complexities of the situation. This example can be from a 
+previous job, school project, volunteer activity, or any relevant event.
 
 **TASK:** What goal were you working toward?
 
-**ACTION:** Describe the actions you took to address the situation with an appropriate amount of detail, and keep the focus on you. What specific steps did you take? What was your particular contribution? Be careful that you don't describe what the team or group did when talking about a project.
+**ACTION:** Describe the actions you took to address the situation with 
+an appropriate amount of detail, and keep the focus on you. What specific 
+steps did you take? What was your particular contribution? Be careful 
+that you don't describe what the team or group did when talking about a 
+project.
 
-Let us know what **YOU** actually did. Use the word "I," not "we," when describing actions.
+Let us know what **YOU** actually did. Use the word "I," not "we," when 
+describing actions.
 
-**RESULT:** Describe the outcome of your actions and don't be shy about taking credit for your behavior. What happened? How did the event end? What did you accomplish? What did you learn?
+**RESULT:** Describe the outcome of your actions and don't be shy about 
+taking credit for your behavior. What happened? How did the event end? 
+What did you accomplish? What did you learn?
 
 Provide examples using metrics or data if applicable.
 
@@ -55,268 +71,65 @@ Provide examples using metrics or data if applicable.
 ## 1. Customer Obsession
 
 ### Definition
-Leaders start with the customer and work backwards. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers.
+Leaders start with the customer and work backwards. They work vigorously 
+to earn and keep customer trust. Although leaders pay attention to 
+competitors, they obsess over customers.
 
 ### Sample Questions
-1. Describe a difficult interaction you had with a customer. How did you deal with it? What was the outcome? How would you handle it differently?
-2. Tell me about a time when you went above and beyond for a customer. Why did you do it? How did the customer respond? What was the outcome?
-3. Give me an example of when you were able to anticipate a customer need with a solution/product they didn't know they needed/wanted yet. How did you know they needed this? How did they respond? (pro active with the customer)
+1. Describe a difficult interaction you had with a customer. How did you 
+   deal with it? What was the outcome? How would you handle it 
+   differently?
+
+2. Tell me about a time when you went above and beyond for a customer. 
+   Why did you do it? How did the customer respond? What was the outcome?
+
+3. Give me an example of when you were able to anticipate a customer need 
+   with a solution/product they didn't know they needed/wanted yet. How 
+   did you know they needed this? How did they respond? 
+   (pro active with the customer)
 
 ### Self-Assessment Questions
 Do you…
 - Honestly pursue customer feedback, not just solicit for compliments?
 - Ask, "is what I'm working on helping my customer"?
-- Listen for what your customer wants, before/instead of telling them what they need (internal customers)?
+- Listen for what your customer wants, before/instead of telling them 
+  what they need (internal customers)?
 - Avoid assuming you know more about them than they do?
-- Involve all stakeholders who serve your customers, and make sure your activities fit with their activities and work together for the customer?
+- Involve all stakeholders who serve your customers, and make sure your 
+  activities fit with their activities and work together for the customer?
 - Remove non-value steps?
-- Stop activities as soon as you realize they no longer enhance the customer experience?
+- Stop activities as soon as you realize they no longer enhance the 
+  customer experience?
 - Think of the customer as a "friend" and tailor your work in that manner?
-- Assume the position of the customer (i.e., how would you like to be treated)?
+- Assume the position of the customer (i.e., how would you like to be 
+  treated)?
 
 ### Example Stories
 
 #### Story 1: Pipeline Process Improvement
-**SITUATION:** A user was frustrated because their pull request (PR) was repeatedly blocked by failures in multiple pipeline stages, preventing merge. According to our SDLC process, every PR had to pass a comprehensive set of automated checks. However, the user felt the process was overly strict and slow, especially for small, low-risk changes.
-
-**TASK:** My goal was to balance high quality and compliance standards while reducing friction in the developer workflow to improve their experience and productivity.
-
-**ACTION:** I proactively engaged users relevant stakeholders to understand the pain points and gather feedback. I conducted thorough review of pipeline and some checks were unnecessary applied across all PR's, regardless of the scope. I partnered with platform team and to design a solution that automatically categorizes PR's by nature and size, this allowed us to run targeted subset of validations on small or low impact PR's. I worked with Risk Control management team and came up with a process to assign a risk assessment score and we the risk score is divided into bands. the changes fall into lower bands are skipped for next steps. Additionally I have improved the error responses which made developers seamlessly identify the cause of failures within each stage.
-
-**RESULT:** This new approach reduced pipeline delays by 50% for low risk changes significantly accelerating developer workflow. I also received positive feedback from multiple teams for making the process more intuitive and less rigid. I learned that delivering meaningful results doesn't always require building something new, often it's about improving what's already existing in a way that aligns with user needs and business goals. Differently: I would have done beta testing before full rollout, as I would have gathered enough feedback, identify bugs and make improvements and put user experience as priority.
-
-#### Story 2: API Performance Issues
-**SITUATION:** Our API platform, critical for our client-facing application, began experiencing high latency and timeouts at peak hours impacting client workflows. This resulted in poor experience and client complaints impacting their work.
-
-**TASK:** As a backend member of them I was responsible for quickly diagnosing and resolving these performance issues to restore reliable service.
-
-**ACTION:** As a backend member of them I was responsible for quickly diagnosing and resolving these performance issues to restore reliable service. I analyzed logs, monitored system and API metrics and communicated with the client to understand the pain points. I discovered that long running requests were saturating the green unicorn worker pool. I refactored the code to introduce the multi threading for I/O bound operations and applied in memory cache aside strategy to serve frequent data faster. I increased gunicorn workers count and worked with infrastructure and client teams to review and adjust the proxy timeout settings. I ran load tests, monitored kibana logs and kept the client closely updated during peak hours.
-
-**RESULT:** The customer saw a drastic reduction in API response times, and reliable responses even during peak hours. Client reported issues dropped significantly and their feedback was overwhelmingly positive. they appreciated both the technical improvements and proactive communication. This experience reinforced my understanding about pro active monitoring and cross team collaboration and keeping the customer at the center of our decisions. By understanding and addressing the pain points we are able to build trust and business value.
-
-#### Story 3: Proactive Security Implementation
-**SITUATION:** When implementing mandatory Snyk security scans in our SDLC pipeline, I anticipated that developers would face significant friction getting blocked from merging code due to vulnerability findings. While the security requirement was non-negotiable, I recognized that simply enforcing it without providing solutions would create developer frustration and potential workarounds.
-
-**ACTION:** My proactive solution: I built three complementary systems before the mandate went live:
-- **Automated Remediation Suggestions:** Created a tool that queries Snyk's vulnerability database and automatically suggests the correct package versions, showing exactly which dependencies were affected and providing remediation steps.
-- **Exception Request Workflow:** Designed an automated approval system allowing developers to request extensions from security teams with proper justification, eliminating manual back-and-forth.
-- **Knowledge Transfer:** Conducted workshops and one-on-one sessions to educate teams on the new process and tools.
-
-**RESULT:** Customer Response: The rollout was remarkably smooth. Developer satisfaction surveys showed 85% found the process "seamless," and we saw a 70% reduction in security-related merge delays compared to similar implementations at other teams. Most importantly, security compliance increased to 95% within the first month.
-
----
-
-## 2. Ownership
-
-### Definition
-Leaders are owners. They think long term and don't sacrifice long-term value for short-term results. They act on behalf of the entire company, beyond just their own team. They never say "that's not my job."
-
-### Sample Questions
-1. Tell me about a time when you took on something significant outside your area of responsibility. Why was it important? What was the outcome?
-2. Describe a time when you didn't think you were going to meet a commitment you promised. How did you identify the risk and communicate it to stakeholders? Is there anything you would do differently?
-3. Give me an example of an initiative you undertook because you saw that it could benefit the whole company or your customers, but wasn't within any group's individual responsibility so nothing was being done.
-
-### Self-Assessment Questions
-Do you…
-- Ask questions?
-- Consider future outcomes (scalable, long-term value, etc.)?
-- Give feedback – coach and develop others (peers, associates, manager)?
-- Speak up in meetings – question, challenge respectfully?
-- Understand your role and relationship with other roles?
-- Understand the impact of your work on others?
-- Partner with peers across the network?
-
-### Example Stories
-
-#### Story 1: Taking on Customer Support
-**SITUATION:** Our team's support engineers were swamped with customer tickets. Customers weren't getting quick help, and our regular work was getting delayed. Even though handling support wasn't my job as a developer, I could see this was hurting our whole team's success.
-
-**TASK:** I wanted to help customers get faster answers and learn what problems they were actually facing so we could build better products.
-
-**ACTION:** I volunteered to handle customer support tickets during my extra hours. Here's what I did: Answered customer questions and fixed their issues quickly. Wrote down common problems so the team could solve them faster next time. Shared customer feedback with developers during our team meetings. Helped newer team members learn how to talk to customers. Worked with product managers to turn customer complaints into actual improvements.
-
-**RESULT:** After 6 months, we answered customer questions 60% faster and customers were much happier. The best part was that customer feedback helped us improve our products, which meant 35% fewer support tickets overall. I also trained two junior developers who became great at helping customers.
-
-#### Story 2: Security Upgrade Commitment
-**SITUATION:** I was tasked with implementing security upgrades across our internal systems - migrating to firm-approved authentication, standard logging, new AD/LDAP accounts with password rotation, and vault-based password storage. The security team set a firm deadline due to compliance requirements, and missing it could impact business operations.
-
-**TASK:** I committed to delivering all security upgrades within the given timeline, promising stakeholders we would meet the deadline based on my initial assessment.
-
-**ACTION:** About 60% through the project, I discovered a critical blocker: our production servers weren't part of the CyberArk allowed nodes cluster, and AD/LDAP services weren't responding. Upon investigation, I found that only private IPs were configured in CyberArk, but since our production servers were hosted on AWS, I needed public IPs whitelisted to communicate with external systems. This required approvals from security architecture teams and network teams, which took much longer than expected - time I hadn't accounted for when making my original commitment. I immediately escalated to stakeholders, documenting the specific IP whitelisting requirements and approval dependencies. I clearly explained how these additional infrastructure requirements would impact our timeline while continuing non-dependent tasks to maintain momentum.
-
-**RESULT:** While I missed the original deadline by 2 weeks, my early risk identification and transparent communication helped minimize impact. All security upgrades were successfully implemented without quality compromises. What I would do differently: "First, I would conduct more thorough discovery and infrastructure assessment during the planning phase to identify all dependencies upfront. Second, I would build buffer time into my estimates to account for cross-team approval processes, which often take longer than anticipated."
-
-#### Story 3: SDLC Modernization Initiative
-**SITUATION:** In my current company, our SDLC critical checks - code quality validation, security scanning, build verification, and deployment gates - were running on legacy Perl services. These services were critical to our software delivery pipeline but had significant issues: they weren't scalable for our growing development team, lacked proper encryption standards and required major changes for simple updates. While functioning, they posed long-term risks to development velocity and could become bottlenecks as we scaled.
-
-**TASK:** Although modernizing these services wasn't assigned to any specific team, I saw an opportunity to align with the company's modernization initiative while addressing these technical risks. My goal was to convert these Perl services to Python to improve scalability, security, and maintainability without disrupting our development workflow.
-
-**ACTION:** I started by analyzing all 12 critical services and interviewing stakeholders across development, QA, security, and DevOps teams. I created a migration strategy prioritizing services by business criticality, starting with the most frequently used code quality checks. I presented this initiative to leadership, demonstrating that our current services took 45 minutes to process pull requests during peak hours and had security compliance violations. I partnered across teams - collaborated with security on encryption standards, worked with DevOps on CI/CD integration, and coordinated with development teams to minimize disruption. Throughout the project, I provided regular updates, created documentation, and conducted knowledge transfer sessions while mentoring two junior developers who joined the effort.
-
-**RESULT:** Over 6 months, I successfully converted all 12 services. Despite the complexity of migrating critical infrastructure, my phased approach and thorough testing kept disruptions minimal - we experienced only brief slowdowns during migration windows and one planned rollback. Results included: Reduced processing time from 45 minutes to 8 minutes per pull request. Increased concurrent capacity to process multiple pipelines at once. Achieved 100% security compliance. Improved deployment frequency by 40%.
-
----
-
-## 3. Invent and Simplify
-
-### Definition
-Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by "not invented here." As we do new things, we accept that we may be misunderstood for long periods of time.
-
-### Sample Questions
-1. Give me an example of a complex problem you solved with a simple solution. What made the problem complex? How do you know your solution addressed the problem?
-2. Describe the most innovative thing you've done and why you thought it was innovative. Ask for one or two more examples to see if it's a pattern of innovative thinking. What was the problem it was solving? What was innovative about it?
-3. Tell me about a time when you were able to make something simpler for customers. What drove you to implement this change? What was the impact?
-
-### Self-Assessment Questions
-Do you…
-- Simplify and always encourage others to innovate and change inefficient or unnecessarily complex processes?
-- Use new ideas and methods to do your job better and enhance the customer experience?
-- Think up and implement great ideas and simple solutions?
-- Know when not to reinvent the wheel?
-
-### Example Stories
-
-#### Story 1: Search Performance Optimization
-**SITUATION:** I was working on a API that searched through a repository of 700,000 log files generated by our automation processes. Users were experiencing significant delays when searching for content, with API response times reaching 8-10 seconds. Server CPU usage spiked to 90% during peak hours, and concurrent requests created a cascading bottleneck that degraded the entire system performance.
-
-**TASK:** My goal was to reduce search latency to under 2 seconds while maintaining system stability and ensuring the solution could scale with our growing data volume.
-
-**ACTION:** Rather than optimizing the existing file-based search architecture, I proposed a fundamental shift to Elasticsearch. Our use case was 80% search operations, which perfectly aligns with ES strengths. Our automation generated consistent log formats that map well to ES document structure. ES handles our 700K+ files easily and can grow to millions without architectural changes. I Designed a migration strategy to move historical data from flat files to Elasticsearch indices. Modified our automation pipeline to write directly to Elasticsearch instead of generating log files. Implemented a phased rollout, starting with new data while backfilling historical records. Created monitoring dashboards to track performance improvements.
-
-**RESULT:** The solution reduced average search response time from 8 seconds to 400 milliseconds - a 95% improvement. Server CPU usage dropped to 30% during peak hours, and we eliminated the concurrent request bottleneck entirely. The system now handles 10x more concurrent searches without performance degradation. This simple architectural change solved what initially seemed like a complex optimization problem by recognizing we needed the right tool, not a better implementation of the wrong tool.
-
-#### Story 2: Push-Based Patch Distribution
-**SITUATION:** Our team managed a critical code patch distribution system for various deployments across the organization. The existing architecture used a 10-minute batch polling mechanism to check for new patches from upstream systems. During high-priority incidents, users had to wait up to 10 minutes for critical patches, which was eroding trust in our platform's reliability during the moments they needed us most.
-
-**TASK:** I needed to eliminate the polling delay while working within constraints of multiple upstream systems that weren't designed for real-time integration.
-
-**ACTION:** Instead of optimizing the polling frequency, I innovated a direct push integration system:
-- **Push APIs:** Built APIs that upstream systems could easily integrate into their patch-building process to push data directly to our system
-- **Seamless integration:** Designed the APIs to be lightweight and simple for upstream teams to adopt without major changes to their workflows
-- **Metadata-driven processing:** Our system receives both patch data and metadata instantly, enabling immediate availability and intelligent routing
-- **Cross-functional collaboration:** Worked with multiple upstream teams to integrate these push APIs into their build pipelines
-
-**RESULT:** Reduced patch availability latency from up to 10 minutes to real-time (under 10 seconds). System reliability increased to 99.9% uptime, and user satisfaction scores improved by 40%. The push APIs now handle 500+ direct patch deliveries daily across 12 upstream systems. What made it innovative: Paradigm shift: Eliminated the "pull" model entirely by making upstream systems active participants in delivery. Frictionless integration: APIs were so simple that teams could integrate them during their existing build process. Real-time architecture: Transformed a batch system into real-time without complex infrastructure changes. Scalable pattern: Created a reusable integration model that other teams have adopted for similar cross-system communications.
-
----
-
-## 4. Insist on the Highest Standards
-
-### Definition
-Leaders have relentlessly high standards—many people may think these standards are unreasonably high. Leaders are continually raising the bar and drive their teams to deliver high quality products, services and processes. Leaders ensure that defects do not get sent down the line and that problems are fixed so they stay fixed.
-
-### Sample Questions
-1. Tell me about a time you wouldn't compromise on achieving a great outcome when others felt something was good enough. What was the situation?
-2. Tell me about a time when you were unsatisfied with the status quo. What did you do to change it? What was the impact? Would you do anything differently in the future?
-3. Tell me about a time when you worked to improve the quality of a product / service / solution that was already getting good customer feedback. Why did you think it needed improvement? How did customers react?
-4. Give me an example of a goal you've had where you wish you had done better. What was the goal and how could you have improved on it?
-
-### Self-Assessment Questions
-Do you…
-- Ensure the quality bar remains high by delivering high quality work, and demanding it of others' work?
-- Continually self-critique your work to make sure the quality is the best it can be?
-- Accept and seek out coaching and feedback from your manager and others about improving the quality of your work?
-
-### Example Story
-
-**SITUATION:** I was assigned an urgent requirement from a client to provide all pipeline metadata tied to change requests through APIs. The client needed this data for their predictive automation system that would run periodic queries every few hours against our systems. The client explicitly stated they prioritized data reliability over latency, and our team had agreed to an SLA of several seconds for internal API response times, which was considered acceptable for periodic automation.
-
-**TASK:** My goal was to deliver a reliable API solution that met the client's data requirements within the agreed SLA timeframe. However, I personally wanted to achieve much higher performance standards than what was considered "good enough" by both the client and my team.
-
-**ACTION:** While others felt the agreed-upon SLA was sufficient, I refused to settle for mediocre performance. I took it upon myself to optimize the solution far beyond the minimum requirements. I conducted a thorough analysis of the API calls and identified routine I/O operations that were generating identical responses for the same queries. I then implemented a comprehensive caching layer to eliminate these redundant operations. I spent additional time profiling the system, identifying bottlenecks, and continuously refining the caching strategy to maximize performance gains. Throughout this process, I maintained my high standards despite pressure to simply deliver a "good enough" solution.
-
-**RESULT:** I achieved a 60% reduction in API response latency, far exceeding the original SLA requirements. The client was so impressed with the performance improvement that they actually reduced the frequency of their periodic automation, which had an unexpected positive impact on our systems. This became crucial because client requests peaked 50% higher than initially expected, putting significant pressure on our infrastructure during peak times. My optimization not only improved the client experience but also reduced the load on our systems, allowing us to better serve other clients during high-demand periods.
-
----
-
-## 5. Bias for Action
-
-### Definition
-Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk taking.
-
-### Sample Questions
-1. Give me an example of a calculated risk that you have taken where speed was critical. What was the situation and how did you handle it? What steps did you take to mitigate the risk? What was the outcome? Knowing what you know now, would you have done anything differently?
-2. Tell me about a time when you worked against tight deadlines and didn't have time to consider all options before making a decision. How much time did you have? What approach did you take? What did you learn from the situation?
-3. Describe a situation where you made an important business decision without consulting your manager. What was the situation and how did it turn out? Would you have done anything differently?
-
-### Self-Assessment Questions
-Do you…
-- Quickly identify if you need more info before taking action, request that info, and move forward?
-- Be ready, willing and able to roll up sleeves and assist with customer-facing tasks when needed?
-- Ask for help when needed in a timely manner?
-- Respond promptly to requests for information?
-- Follow up and deliver as promised?
-- Make sure you create an "action item list" (identify owner and target dates)?
-
----
-
-## 6. Learn and Be Curious
-
-### Definition
-Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
-
-### Sample Questions
-1. What is the coolest thing you have learned on your own that has helped you better perform your job?
-2. Tell me about a time when you realized you needed to have a deeper level of subject matter expertise to do your job well?
-3. Tell me of a time when you took on work outside of your comfort area and found it rewarding?
-
-### Self-Assessment Questions
-Do you…
-- Take time to read, watch a tech talk, or actively mentor someone else?
-- Ask your peers, manager, and customers for feedback on your performance?
-- Pick up work outside your area of expertise to stretch and grow?
-- Take time to understand your systems end to end?
-- Actively seek out advice from others?
-
----
-
-## 7. Earn Trust
-
-### Definition
-Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing. Leaders do not believe their or their team's body odor smells of perfume. They benchmark themselves and their teams against the best.
-
-### Sample Questions
-1. Tell me about a time when you had to communicate a change in direction that you anticipated people would have concerns with. What did you do to understand the concerns and mitigate them? Were there any changes you made along the way after hearing these concerns? How did you handle questions and/or resistance? Were you able to get people comfortable with the change?
-2. Give me an example of a tough or critical piece of feedback you received. What was it and what did you do about it?
-3. Describe a time when you needed to influence a peer who had a differing opinion about a shared goal. What did you do? What was the outcome?
-4. Tell me about a piece of direct feedback you recently gave to a colleague. How did he or she respond? How do you like to receive feedback from coworkers or managers?
-
-### Self-Assessment Questions
-Do you…
-- Earn the trust and respect of the team and build positive working relationships by consistently making good decisions, keeping commitments, treating others and their ideas with respect, and adhering to high ethical standards?
-- Admit mistakes, issues and areas for development; seek out and accept coaching and feedback to improve?
-- Escalate issues even when doing so might be unpopular?
-
-### Example Story
-
-**SITUATION:** Our team implemented a new policy requiring all code changes to follow standard SDLC procedures with testing, security reviews, and approvals. However, some clients had legitimate infrastructure changes that didn't need the full SDLC process, but we couldn't differentiate them from regular deployments.
-
-**TASK:** I needed to communicate this change, address anticipated client resistance, and ensure smooth implementation while maintaining trust and alignment with management's directive.
-
-**ACTION:** I proactively reached out to key stakeholders to understand their concerns before resistance escalated. I listened to their feedback and discovered many were worried about delays to critical infrastructure changes. Instead of dismissing concerns, I openly acknowledged the validity of their issues and admitted our initial approach had gaps. I was transparent about the management directive while working collaboratively with clients to design an exception workflow for legitimate infrastructure changes. I held working sessions to refine the process and established regular feedback channels.
-
-**RESULT:** By listening and adapting, I created a hybrid workflow that satisfied both compliance requirements and client needs. Within three months, 95% of changes followed new SDLC procedures, with the remaining 5% handled efficiently through the exception process. Client satisfaction remained high because they felt heard and respected. My transparent communication and willingness to adapt based on feedback strengthened relationships with both clients and stakeholders, demonstrating that earning trust requires honest dialogue even when uncomfortable.
-
----
-
-## 8. Dive Deep
-
-### Definition
-Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them.
-
-### Sample Questions
-1. Tell me about a time when you were trying to understand a complex problem on your team and you had to dig into the details to figure it out. Who did you talk with or where did you have to look to find the most valuable information? How did you use that information to help solve the problem?
-2. Tell me about a situation that required you to dig deep to get to the root cause. How did you know you were focusing on the right things? What was the outcome? Would you have done anything differently?
-3. Tell me about a problem you had to solve that required in-depth thought and analysis. How did you know you were focusing on the right things? What was the outcome? Would you have done anything differently?
-
-### Self-Assessment Questions
-Do you…
-- Refrain from passing the buck on unwanted tasks, demonstrate hustle and a "do what it takes" attitude to get things done, even if that means being hands-on?
-- Have a firm grasp of the details of your work in order to deeply discuss it?
-- Frequently "audit" your work by checking accuracy, facts and assumptions?
-
-### Example Story
-
-**SITUATION:** I encountered a critical production issue where our server was experiencing extremely high CPU usage with multiple Celery tasks stuck in the STARTING state. While I restarted the services which temporarily improved the CPU usage, status alerts continued to persist, indicating deeper underlying problems.
-
-**TASK:** I needed to identify the root cause of why certain tasks remained in STARTING state despite the restart and determine if there were still performance bottlenecks affecting our production
+**SITUATION:** A user was frustrated because their pull request (PR) was 
+repeatedly blocked by failures in multiple pipeline stages, preventing 
+merge. According to our SDLC process, every PR had to pass a comprehensive 
+set of automated checks. However, the user felt the process was overly 
+strict and slow, especially for small, low-risk changes.
+
+**TASK:** My goal was to balance high quality and compliance standards 
+while reducing friction in the developer workflow to improve their 
+experience and productivity.
+
+**ACTION:** I proactively engaged users relevant stakeholders to understand 
+the pain points and gather feedback. I conducted thorough review of pipeline 
+and some checks were unnecessary applied across all PR's, regardless of the 
+scope. 
+
+I partnered with platform team and to design a solution that automatically 
+categorizes PR's by nature and size, this allowed us to run targeted subset 
+of validations on small or low impact PR's. I worked with Risk Control 
+management team and came up with a process to assign a risk assessment score 
+and we the risk score is divided into bands. the changes fall into lower 
+bands are skipped for next steps. 
+
+Additionally I have improved the error responses which made developers 
+seamlessly identify the cause of failures within each stage.
+
+**RESULT:** This new approach reduced pipeline de
