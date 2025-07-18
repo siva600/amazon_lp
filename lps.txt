@@ -586,6 +586,82 @@ Do you…
 
 ---
 
+Amazon Leadership Principles
+6. Learn and Be Curious
+Definition
+Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
+Sample Questions
+
+What is the coolest thing you have learned on your own that has helped you better perform your job?
+Tell me about a time when you realized you needed to have a deeper level of subject matter expertise to do your job well?
+Tell me of a time when you took on work outside of your comfort area and found it rewarding?
+
+Self-Assessment Questions
+Do you…
+
+Take time to read, watch a tech talk, or actively mentor someone else?
+Ask your peers, manager, and customers for feedback on your performance?
+Pick up work outside your area of expertise to stretch and grow?
+Take time to understand your systems end to end?
+Actively seek out advice from others?
+
+
+STAR Example Response
+
+Situation/task:
+I was responsible for maintaining a critical API that validates pull
+requests before merging - this API runs through multiple checks using a
+third-party remedy service and is essential for our development workflow.
+One morning, I noticed that developers were unable to merge their PRs and
+were blocked from releasing their code. This was impacting multiple teams
+and could delay critical releases.
+
+Action:
+
+When I investigated, I discovered the API was returning 500 errors. I
+started by validating connectivity using telnet to the remote server,
+which showed the connection was working. I reached out to the API team to
+check for any recent configuration changes, but they confirmed nothing
+had changed on their end.
+
+Here's where my curiosity kicked in - rather than just escalating
+immediately, I wanted to understand the root cause. I tested the same API
+call from different machines and discovered an interesting pattern: all
+machines ending with 'm15' were failing, while machines ending with 'm7'
+were succeeding. This suggested a network-level issue rather than an
+application problem.
+
+Since I didn't have deep networking expertise, I reached out to a peer
+who specialized in network architecture. They suggested this could be a
+firewall issue. This sparked my curiosity to learn more - I dove into
+network team documentation to understand how our cluster architecture
+worked and why one set of nodes would be impacted while others weren't.
+I also checked our logs and found that the last successful PR merge
+happened around midnight, which helped narrow down the timeline. Armed
+with this information, I contacted the network operations team with
+detailed findings about the m15 vs m7 pattern.
+The network team confirmed it was indeed a firewall issue, but they
+couldn't implement the fix until after market hours due to production
+safety protocols. However, our developers couldn't wait - they needed to
+release code that day.
+So I had to think creatively - I designed and implemented a proxy API
+that would route requests from m15 nodes through the working m7 nodes and
+return responses back to the m15 nodes. I quickly developed this
+solution, ran comprehensive tests and integration checks, and deployed it
+to unblock our users.
+
+Results:
+The proxy solution immediately unblocked all developers, allowing them to
+merge PRs and continue their release schedules without any delays. After
+market hours, the network team implemented their firewall fix, and I
+reverted my proxy changes, testing to ensure everything worked normally.
+But the bigger win was what I learned - I gained a much deeper
+understanding of our network architecture, firewall configurations, and
+how our multi-cluster setup works. This knowledge has helped me
+troubleshoot similar issues more effectively and even proactively
+identify potential network-related problems in other systems I manage.
+
+
 ## 7. Earn Trust
 
 ### Definition
