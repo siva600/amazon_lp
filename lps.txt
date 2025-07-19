@@ -126,7 +126,7 @@ I partnered with platform team and to design a solution that automatically
 categorizes PR's by nature and size, this allowed us to run targeted subset 
 of validations on small or low impact PR's. I worked with Risk Control 
 management team and came up with a process to assign a risk assessment score 
-and we the risk score is divided into bands. the changes fall into lower 
+which is divided into bands. the changes fall into lower 
 bands are skipped for next steps. 
 
 Additionally I have improved the error responses which made developers 
@@ -149,23 +149,25 @@ began experiencing high latency and timeouts at peak hours impacting client
 workflows. This resulted in poor experience and client complaints impacting 
 their work.
 
-**TASK:** As a backend member of them I was responsible for quickly 
+**TASK:** As a backend member I was responsible for quickly 
 diagnosing and resolving these performance issues to restore reliable 
 service.
 
 **ACTION:** I analyzed logs, monitored system and API metrics and 
 communicated with the client to understand the pain points. I discovered 
-that long running requests were saturating the green unicorn worker pool. 
+that long running requests were saturating the green unicorn worker pool.
+I came up with various steps thtat can reduce latency. First, 
 I refactored the code to introduce the multi threading for I/O bound 
-operations and applied in memory cache aside strategy to serve frequent 
-data faster. 
+operations and second, I applied in memory cache aside strategy to serve frequent 
+data to acess it faster. 
 
-I increased gunicorn workers count and worked with infrastructure and client 
-teams to review and adjust the proxy timeout settings. I ran load tests, 
+Third, I increased gunicorn workers count and worked with infrastructure and client 
+teams to review and adjust the proxy timeout settings. Finally, I ran load tests, 
 monitored kibana logs and kept the client closely updated during peak hours.
+All this was achieved by putting extra hours and client first.
 
 **RESULT:** The customer saw a drastic reduction in API response times, and 
-reliable responses even during peak hours. Client reported issues dropped 
+response was reliable even during peak hours. Client reported issues dropped 
 significantly and their feedback was overwhelmingly positive. they 
 appreciated both the technical improvements and proactive communication. 
 
