@@ -147,11 +147,11 @@ user experience as priority.
 **SITUATION:** Our API platform, critical for our client-facing application, 
 began experiencing high latency and timeouts at peak hours impacting client 
 workflows. This resulted in poor experience and client complaints impacting 
-their work.
+their work. 
 
 **TASK:** As a backend member I was responsible for quickly 
 diagnosing and resolving these performance issues to restore reliable 
-service.
+service within few hours after this alert. 
 
 **ACTION:** I analyzed logs, monitored system and API metrics and 
 communicated with the client to understand the pain points. I discovered 
