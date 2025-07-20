@@ -844,6 +844,26 @@ Do you…
 - Persevere through setbacks and overcome obstacles to deliver outstanding 
   results?
 
+SITUATION
+I was responsible for integrating SPA APIs into our system as part of our SDLC automation checks. Originally, I was working on just the SPA API integration with a comfortable timeline. However, our plan was updated mid-development to include ServiceNow APIs as a backup solution when SPA APIs fail to respond.
+The challenge was that ServiceNow had their own delivery deadline that was one month earlier than our original timeline. This meant I needed to demonstrate a working integration of both systems a full month ahead of our planned schedule to align with their production readiness.
+
+TASK
+My goal was to deliver a working integration of both SPA APIs and ServiceNow APIs as a backup solution. I needed to accelerate my timeline by one month to meet ServiceNow's deadline, which meant completing development, testing, load testing, and integration testing across lower environments (NON-PRD and DR) much faster than originally planned while maintaining quality standards.
+
+ACTION
+I immediately reprioritized my work to focus on this accelerated timeline. I put in additional hours, working evenings and weekends, to speed up the development process for both API integrations.
+Since I was also assigned routine support tasks that were slowing down my progress, I reached out to my team for help. I explained the situation and urgency to my manager and teammates, and they agreed to take over my support responsibilities so I could concentrate fully on this critical integration.
+I organized my work to handle both APIs in parallel where possible and established daily check-ins with the ServiceNow team to ensure our integration points were aligned with their timeline.
+
+Despite the time pressure, I maintained all testing standards. I completed thorough development testing with 95% code coverage, coordinated load testing with performance benchmarks, and executed comprehensive integration testing across all 3 lower environments to ensure quality wasn't compromised.
+
+RESUT:
+I successfully delivered both the SPA API integration and ServiceNow API backup solution one month ahead of our original timeline, meeting ServiceNow's deadline perfectly. Despite the accelerated timeline, the solution maintained high quality with no post-deployment issues. The integration now handles an average of 1000+ API calls daily with 99.5% uptime and automatic failover to ServiceNow when needed.
+
+
+I learned when to ask for help and redistribute work is crucial for meeting critical deadlines and Breaking complex work into parallel streams significantly improves delivery speed without sacrificing quality.
+and learned how to maintain testing standards even under pressure which prevents technical debt and future issues.
 ---
 
 ## 10. Are Right, A Lot
