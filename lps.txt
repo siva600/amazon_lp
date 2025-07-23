@@ -242,7 +242,7 @@ Do you…
 #### Story 1: Taking on Customer Support
 **SITUATION:** Our team's support engineers were swamped with customer 
 tickets. Customers weren't getting quick help, and our regular work was 
-getting delayed. Even though handling support wasn't my job as a developer, 
+getting delayed.
 I could see this was hurting our whole team's success.
 
 **TASK:** I wanted to help customers get faster answers and learn what 
@@ -253,7 +253,7 @@ extra hours. Here's what I did:
 - Answered customer questions and fixed their issues quickly
 - Wrote down common problems so the team could solve them faster next time
 - Shared customer feedback with developers during our team meetings
-- Helped newer team members learn how to talk to customers
+- Helped newer members by documenting my discoveries.
 - Worked with product managers to turn customer complaints into actual 
   improvements
 
