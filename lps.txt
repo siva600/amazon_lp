@@ -156,14 +156,14 @@ service within few hours after this alert.
 **ACTION:** I analyzed logs, monitored system and API metrics and 
 communicated with the client to understand the pain points. I discovered 
 that long running requests were saturating the green unicorn worker pool.
-I came up with various steps thtat can reduce latency. First, 
-I refactored the code to introduce the multi threading for I/O bound 
+I came up with various steps thtat can reduce latency. 
+First, I increased gunicorn workers count and worked with infrastructure and client 
+teams to review and adjust the proxy timeout settings.
+second, I refactored the code to introduce the multi threading for I/O bound 
 operations and second, I applied in memory cache aside strategy to serve frequent 
 data to acess it faster. 
-
-Third, I increased gunicorn workers count and worked with infrastructure and client 
-teams to review and adjust the proxy timeout settings. Finally, I ran load tests, 
-monitored kibana logs and kept the client closely updated during peak hours.
+Finally, I ran load tests, monitored kibana logs and kept the client closely 
+updated during peak hours.
 All this was achieved by putting extra hours and client first.
 
 **RESULT:** The customer saw a drastic reduction in API response times, and 
@@ -183,6 +183,7 @@ getting blocked from merging code due to vulnerability findings. While the
 security requirement was non-negotiable, I recognized that simply enforcing 
 it without providing solutions would create developer frustration and 
 potential workarounds.
+my goal is to provide seamless integration to customers.
 
 **ACTION:** My proactive solution: I built three complementary systems 
 before the mandate went live:
